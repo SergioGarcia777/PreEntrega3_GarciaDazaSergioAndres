@@ -1,0 +1,17 @@
+// TIPOGRAFIAS + VARIABLES + COLORES +RESET
+@import './assets/colores';
+
+@import './assets/reset';
+
+
+// SECCIONES
+  @import './sectiones/header';
+  @import './sectiones/index';
+  @import './sectiones/menu';
+  @import './sectiones/nosotros';
+  @import './sectiones/locales';
+  @import './sectiones/contacto';
+  @import './sectiones/footer';
+  @import './sectiones/socialMedia';
+
+  @import "../node_modules/bootstrap/scss/bootstrap";

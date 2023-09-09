@@ -1,0 +1,118 @@
+/*------>MENU<------*/
+  
+.contenedor-2 { display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 0.1fr 1.6fr);
+    grid-gap: auto;
+    width: 100%;
+      max-width: 100%;
+      margin: auto auto;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "cabeza"
+      "cuerpo"
+      "cabeza-1"
+      "cuerpo-1"
+      "cabeza-2"
+      "cuerpo-2";
+  }
+  .contenedor-2 > section,
+  .contenedor-2 .cabeza,
+  .contenedor-2 .cuerpo,
+  .contenedor-2 .cabeza-1,
+  .contenedor-2 .cuerpo-1,
+  .contenedor-2 .cabeza-2,
+  .contenedor-2 .cuerpo-2 {
+      
+      padding: 20px;
+      border-radius: 4px;
+  }
+  .cabeza { grid-area: cabeza; background: #3b5998;}
+  
+  .cuerpo { grid-area: cuerpo;background: #76c893; }
+  
+  .cabeza-1 { grid-area: cabeza-1; background: #0a1945;}
+  
+  .cuerpo-1 { grid-area: cuerpo-1; background: #e33f5f;}
+  
+  .cabeza-2 { grid-area: cabeza-2;background: #fec66d; }
+  .cabeza-2 h3{
+    background-color: #09203f;
+  }
+  
+  .cuerpo-2 { grid-area: cuerpo-2;background: brown;
+   }
+  .contenedor-2 h1,
+  .contenedor-2 h2,
+  .contenedor-2 h3
+  {
+    text-align: center;
+    text-decoration: solid;
+    color: #99d98c;
+  }
+  .clasicas {
+      display: flex;
+      width: 100%;
+      padding: 50px;
+    }
+    
+    .insignias {
+      background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+      color: white;
+      width: 320px;
+      height: 550px;
+      border-radius: 10px;
+      padding: 30px;
+      box-sizing: border-box;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    
+      box-shadow: -3px 0 10px rgba(0, 0, 0, 0.3), -4px 0 10px rgba(0, 0, 0, 0.2),
+        -5px 0 10px rgba(0, 0, 0, 0.1);
+    
+      transition: all 0.3s ease;
+    }
+    
+    .insignias a {
+      color: yellow;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .insignias a:hover {
+      color: lightyellow;
+    }
+    
+    .insignias:hover {
+      margin-right: 80px;
+      transform: rotate(3deg) translateY(-150px);
+    }
+    
+    .insignias .encabezado {
+      flex: 1;
+      font-size: 30px;
+    }
+    
+    .insignias .encabezado .titulo {
+      padding: 10px 0;
+    }
+    
+    .insignias .encabezado .ingredientes {
+      font-size: 18px;
+    }
+    
+    
+    
+    .element-1:hover,
+    .element-2:hover,
+    .element-3:hover {
+      margin-left: -130px;
+    }
+    .author img{
+      width: 70%;
+      display: block;
+      margin: auto;
+        width: 200px;
+        height: 200px;
+    }
