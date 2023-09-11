@@ -1,0 +1,39 @@
+@mixin redes-btnmas(){ display: block;
+text-decoration: none;
+background: #12203E;
+color: #fff;
+width: 55px;
+height: 55px;
+line-height: 55px;
+text-align: center;
+border-radius: 50%;
+box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+transition: all 500ms ease
+}
+
+@mixin header-nav () {
+    background: #168aad;
+    transition: .5s;
+    text-decoration: solid;
+}
+
+@mixin nav-medias () {
+    background: $azul1;
+     color: darkblue;
+}
+
+@mixin menu-contenedor(){
+    text-align: center;
+    text-decoration: solid;
+    color: #99d98c;
+}
+
+@mixin widgets (){
+    background: #76c893;
+    color: #fff;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

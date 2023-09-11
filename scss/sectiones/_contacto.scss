@@ -1,5 +1,6 @@
 /* ------>CONTACTO<------ */
-.formulario {  display: grid;
+.formulario {  
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.2fr .6fr .2fr .5fr;
     grid-auto-columns: 1fr;
@@ -11,131 +12,139 @@
       "numeros"
       "formato-1";
     width: 100%;
-  }
-  
-  .contactanos { grid-area: contactanos; 
-  background: #76c893;
-  }
-  
-  .contactanos h1{
-    text-align: center;
-  }
-  
-  .formato { grid-area: formato;
-    width:340px;
-      height:440px;
-      background:#34a0a4;
-      border-radius:8px;
-      box-shadow:0 0 40px -10px #000;
-      margin:calc(40vh - 220px) auto;
-      padding:20px 30px;
-      max-width:calc(100vw - 40px);
-      box-sizing:border-box;
-      font-family:'Montserrat',sans-serif;
-      position:relative
-  }
-  formato h2{
-      margin:10px 0;
-      padding-bottom:10px;
-      width:180px;
-      color:#18186b;
-      border-bottom:3px solid #18186b
-  }
-  
-  input{
-      width:100%;
-      padding:10px;
-      box-sizing:border-box;
-      background:none;
-      outline:none;
-      resize:none;
-      border:0;
-      font-family:'Montserrat',sans-serif;
-      transition:all .3s;
-      border-bottom:2px solid #bebed2
-  }
-  input:focus{
-      border-bottom:2px solid #78788c;
-  }
-  p:before{
-      content:attr(type);
-      display:block;
-      margin:28px 0 0;
-      font-size:14px;
-      color:#000000}
-  button{
-      float:right;
-      padding:8px 12px;
-      margin:8px 0 0;
-      font-family:'Montserrat',sans-serif;
-      border:2px solid #ffffff;
-      background:0;
-      color:#000;
-      cursor:pointer;
-      transition:all .3s}
-  button:hover{
-      background:#12203E;
-      color:#fff
-  }
-  .formato div{
-      content:'Hi';
-    display: flex;
-      position:absolute;
-      bottom:20px;
-      right:120px;
-      background: darkblue;
-      color:#fff;
-      width:210px;
-      padding:10px 4px 10px 0;
-      border-radius:6px;
-      font-size:13px;
-      box-shadow:10px 10px 40px -14px #000}
-  .formato div ul{
-      margin:0 5px 0 0;
-    list-style: none;
-    
-  }
-  
-  .numeros { grid-area: numeros; 
-  background: #12203E;
-  color: #ffffff;
-  display: flexbox;
-  text-align: center;}
-  
-  .formato-1 { grid-area: formato-1; }
-  .formato-1 .formato{
-  
-      width:340px;
-      height:540px;
-    text-align: justify;
+    .contactanos { grid-area: contactanos; 
+    background: #76c893;
+     h1{
+      text-align: center;
+     }
+    }
+    .formato {
+        grid-area: formato;
+        width:340px;
+        height:440px;
+        background:$azul1;
+        border-radius:8px;
+        box-shadow:0 0 40px -10px #000;
+        margin:calc(40vh - 220px) auto;
+        padding:20px 30px;
+        max-width:calc(100vw - 40px);
+        box-sizing:border-box;
+        font-family:'Montserrat',sans-serif;
+        position:relative
       
-  }
+      h2{
+        margin:10px 0;
+        padding-bottom:10px;
+        width:180px;
+        color:#18186b;
+        border-bottom:3px solid #18186b
+         }
+         input{
+             width:100%;
+             padding:10px;
+             box-sizing:border-box;
+             background:none;
+             outline:none;
+             resize:none;
+             border:0;
+             font-family:'Montserrat',sans-serif;
+             transition:all .3s;
+             border-bottom:2px solid #bebed2;
+              &:focus{
+                 border-bottom:2px solid #78788c;
+              }
+            }
+            p{
+            
+             &:before{
+                content:attr(type);
+                display:block;
+                margin:28px 0 0;
+                font-size:14px;
+                color:#000000
+              }
+            }
+            button{
+              float:right;
+              padding:8px 12px;
+              margin:8px 0 0;
+              font-family:'Montserrat',sans-serif;
+              border:2px solid $blanquito;
+              background:0;
+              color:#000;
+              cursor:pointer;
+              transition:all .3s;
+              &:hover{
+                background:#12203E;
+                color:#fff
+              }
+            }
+            div {
+              content:'Hi';
+              display: flex;
+              position:absolute;
+              bottom:-30px;
+              right:620px;
+              background: darkblue;
+              color:#fff;
+              width:210px;
+              padding:10px 4px 10px 0;
+              border-radius:6px;
+              font-size:13px;
+              box-shadow:10px 10px 40px -14px #000;
+               ul{
+                  margin:0 5px 0 0;
+                  list-style: none;
+                }
+              }
+          }
+    .numeros { 
+      grid-area: numeros; 
+      background: #12203E;
+      color: $blanquito;
+      display: flexbox;
+      text-align: center;
+    }
+    .formato-1 { grid-area: formato-1;
+       .formato{
+      
+          width:340px;
+          height:540px;
+          text-align: justify;
+        }
+        ul{
+          list-style: none;
+          display: flex;
+        }
+        .button-1{
+            float:right;
+             padding:8px 12px;
+             margin: 50px 0 0;
+             font-family:'Montserrat',sans-serif;
+             border:2px solid $blanquito;
+             background:0;
+             color:#000;
+             cursor:pointer;
+             transition:all .3s;
+              input{
+               display: inline-block;
+              }
+              &:hover{
+                  background:#12203E;
+                  color:#fff
+              }
+        }
+        .contacto{
+            display: flex;
+            justify-content: space-evenly;
+        }
+     }
+}
   
-  .formato-1 ul{
-    list-style: none;
-    display: flex;
-    
-    
-  }
-  .formato-1 .button-1{
-    float:right;
-      padding:8px 12px;
-      margin: 50px 0 0;
-      font-family:'Montserrat',sans-serif;
-      border:2px solid #ffffff;
-      background:0;
-      color:#000;
-      cursor:pointer;
-      transition:all .3s}
-  .button-1 input{
-    display: inline-block;
-  }
   
-  .button-1:hover{
-      background:#12203E;
-      color:#fff
-  }
-  .formato-1 .contacto{
-      display: flex;
-      justify-content: space-evenly;
-  }
+  
+  
+
+  
+  
+  

@@ -1,77 +1,111 @@
 /* --->Barra Social Media<--- */
-#btn-mas{
+.container-- {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  .redes {
+    i {
+      @include redes-btnmas;
+      margin-bottom: -15px;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .repro {
+      i {
+        &:hover {
+          background: $blanquito;
+          color: #cc2b2b;
+        }
+      }
+    }
+
+    .face {
+      i {
+        &:hover {
+          background: #3b5998;
+          color: $blanquito;
+        }
+      }
+    }
+
+    .twit {
+      i {
+        &:hover {
+          background: #000000;
+          color: $blanquito;
+        }
+      }
+    }
+
+    .pint {
+      i {
+        &:hover {
+          color: $blanquito ;
+          background: #780000;
+        }
+      }
+    }
+
+    .message {
+      i {
+        &:hover {
+          background: rgb(40, 159, 40);
+          color: $blanquito;
+        }
+      }
+    }
+
+    .insta {
+      i {
+        &:hover {
+          background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+          color: $blanquito;
+        }
+      }
+    }
+  }
+
+  .btn-mas {
+    label {
+      @include redes-btnmas;
+      cursor: pointer;
+      background: #12203E;
+      font-size: 23px;
+
+      &:hover {
+        background: #dd4336;
+      }
+    }
+  }
+
+  #btn-mas {
     display: none;
+
+    &:checked~ {
+      .redes {
+        i {
+          margin-bottom: 10px;
+          opacity: 1;
+          visibility: visible;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &:checked~ {
+      .btn-mas {
+        label {
+          transform: rotate(180deg);
+          font-size: 25px;
+        }
+      }
+    }
   }
+}
+@media screen and (max-width: 768px){
   .container--{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+       display: none;
   }
-  .redes i, .btn-mas label{
-    display: block;
-    text-decoration: none;
-    background: #12203E;
-    color: #fff;
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    text-align: center;
-    border-radius: 50%;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
-    transition: all 500ms ease;
-  }
-  .repro i:hover{
-    background: #fff;
-    color: #cc2b2b;
-  }
-  
-  .face i:hover{
-    background: #3b5998;
-    color: #ffffff;
-  }
-  
-  .twit i:hover{
-    background: #000000;
-    color: #ffffff;
-  }
-  
-  .pint i:hover{
-    color: #ffffff ;
-    background: #780000;
-  }
-  
-  .message i:hover{
-    background: rgb(40, 159, 40);
-    color: #ffffff;
-  }
-  
-  .insta i:hover{
-    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
-    color: #ffffff;
-  }
-  
-  .redes i{
-    margin-bottom: -15px;
-    opacity: 0;
-    visibility: hidden;
-  }
-  #btn-mas:checked~ .redes i{
-    margin-bottom: 10px;
-    opacity: 1;
-    visibility: visible;
-    cursor: pointer;
-  }
-  
-  .btn-mas label:hover{
-    background: #dd4336;
-  }
-  .btn-mas label{
-    cursor: pointer;
-    background: #12203E;
-    font-size: 23px;
-  }
-  #btn-mas:checked ~ .btn-mas label{
-    transform: rotate(180deg);
-    font-size: 25px;
-    
-  }
+}

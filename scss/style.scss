@@ -1,6 +1,6 @@
 // TIPOGRAFIAS + VARIABLES + COLORES +RESET
+@import './assets/variables';
 @import './assets/colores';
-
 @import './assets/reset';
 
 
@@ -13,5 +13,5 @@
   @import './sectiones/contacto';
   @import './sectiones/footer';
   @import './sectiones/socialMedia';
-
+// BOOTSTRAP
   @import "../node_modules/bootstrap/scss/bootstrap";
