@@ -141,9 +141,70 @@
      }
 }
   
-  
-  
-  
+// Mediaqueries
+@media screen and (max-width: 768px) {
+  .formulario{height: 1250px;
+    h3{
+      background: darkslategrey;
+      text-align: center;
+      color: $blanquito;
+    }
+    .contactanos{
+      text-align: center;
+    }
+    
+    .formato{
+       align-items: center;
+       margin: 20px auto;
+          div{
+            bottom: -130px;
+            right: 320px;
+          }      
+    }
+    .numeros{
+      p{
+        font-size: smaller;
+        text-align: center;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+.formulario{ height: 1810px;
+    
+        h3{
+          background: darkslategrey;
+          text-align: center;
+          color: $blanquito;
+        }
+        .formato{
+          align-items: center;
+          margin: 20px auto;
+             div{
+               bottom: -120px;
+               right: 240px;
+             }      
+       }
+        .contacto {
+                   display: flex;
+                   flex-direction: column-reverse;
+                   align-items: center;
+         }
+     
+ }
+}  
+@media screen and (max-width: 425px){
+.formulario{
+  .formato{
+    align-items: center;
+    margin: 20px auto;
+       div{
+         bottom: -120px;
+         right: 150px;
+       } 
+  }
+ }
+}  
 
   
   

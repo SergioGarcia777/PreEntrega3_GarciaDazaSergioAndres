@@ -36,9 +36,15 @@
      padding: 40px;
      border-style: groove;
      background: $azul1;
+     flex-wrap: wrap;
 
      img {
        image-orientation: from-image;
+     }
+     iframe{
+      width: 600px;
+      height: 450px;
+      border-style: ridge;
      }
    }
 
@@ -92,4 +98,77 @@
        }
      }
    }
+ }
+ @media screen and (max-width: 768px){
+  .locales{
+    height: 2900px;
+    .local{
+      position: inherit;
+    }
+    .local-1{
+      display: flex;
+      flex-wrap: wrap;
+     height: 900px;
+    }
+    .tienda{
+      flex-direction: column;
+    }
+    .tienda-1{
+      flex-direction: column;
+    }
+  }
+
+ }
+ @media screen and (max-width: 600px) {
+  .locales{
+    height: 3400px;
+    .local-1{
+      display: flex;
+      flex-wrap: wrap;
+      height: 900px;
+      width: 600px;
+      iframe{
+        width: 500px;
+      }
+
+    }
+    .tienda{
+      flex-direction: column;
+    }
+    .tienda-1{
+      flex-direction: column;
+    }
+  }
+ }
+ @media screen and (max-width: 425px) {
+  .locales{
+    height: 3370px;
+    .local{
+      width: 425px;
+    }
+    .local-1{
+      display: flex;
+      flex-wrap: wrap;
+      height: 900px;
+      width: 425px;
+      iframe{
+        width: 350px;
+      }
+
+    }
+    .tienda{
+      flex-direction: column;
+      width: 425px;
+      iframe{
+        width: 350px;
+      }
+    }
+    .tienda-1{
+      flex-direction: column;
+      width: 425px;
+      iframe{
+        width: 350px;
+      }
+    }
+  }
  }

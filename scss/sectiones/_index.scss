@@ -74,6 +74,31 @@
             grid-area: publicidad;
             padding: 20px;
             border-radius: 4px;
+            display: grid;
+            grid-template-areas: "gourmet"
+                                 "animada";
+            .gourmet{
+              padding: 10px;
+              background-image: linear-gradient( 179deg,  rgba(0,0,0,1) 9.2%, rgba(127,16,16,1) 103.9% );
+              
+            }
+            .animada{
+              padding: 10px;
+              background-image: linear-gradient( 109.6deg,  rgba(61,131,97,1) 11.2%, rgba(28,103,88,1) 91.1% );
+            }
+            img{
+              width: 80%;
+              margin: auto;
+              display: inline-block;
+              
+              height: 250px;
+              border-radius: 40%;
+            }
+            p {
+              text-align: justify;
+              color: $blanquito;
+             
+            }
           }
           .widget-3 {
             grid-area: widget-3;
@@ -82,7 +107,7 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 80%;
+            width: 70%;
             }
           }
           .widget-4 {
@@ -106,24 +131,77 @@
             }
           }
 }
-
+// Mediaqueries
 @media screen and (max-width: 768px){
     .contenedor-1 {
         grid-template-areas: "barra barra barra"
                          "resumen resumen resumen"
                          "publicidad publicidad publicidad"
-                         "widget-3 widget-3 widget-4"
-                         "pie-pagina pie-pagina pie-pagina";
+                         "widget-3 widget-3 widget-4";
                          .resumen {
                            .resumen-1{
                              grid-template-areas: "pizzas"
                              "lasagna"
                              "adicionales"
                              "promociones";
-                           }
-                         }
-                           
+                            }
+                          }
+                         .widget-3{
+                             display: block;
+                             img {
+                              width: 60%;
+                              margin-top: 1rem;
+                             } 
+                         }                                           
     }
+}
 
-  
+@media screen and (max-width: 600px) {
+  .contenedor-1 {
+      
+                     .resumen {
+                      .resumen-1{
+                        grid-template-areas: "pizzas"
+                        "lasagna"
+                        "adicionales"
+                        "promociones";
+                        display: inline-block;
+                       }
+                     }
+                     .widget-3{
+                      display: flex;
+                      align-self: center;
+                      img {
+                       width: 100%;
+                      } 
+                  }   
+  }
+}
+@media screen and (max-width: 425px) {
+                       
+  .contenedor-1 {               
+                     .resumen {
+                      .resumen-1{
+                        grid-template-areas: "pizzas"
+                        "lasagna"
+                        "adicionales"
+                        "promociones";
+                        display: inline-block;
+                       }
+                     }
+                     .widget-3{
+                      display: flex;
+                      align-self: center;
+                      img {
+                       width: 100%;
+                      } 
+                     .widget-4{
+                      display: inline;
+                      a{
+                      max-width: 0%;
+                      padding: 100px;
+                      }
+                     }
+                  }   
+  }
 }

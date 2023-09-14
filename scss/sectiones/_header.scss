@@ -58,26 +58,7 @@ nav {
 }
 
 // Mediaqueries
-@media (max-width: 952px) {
-
-  nav {
-    .enlace {
-      padding-left: 20px;
-    }
-
-    ul {
-      li {
-        a {
-          font-size: 16px;
-          color: #fff;
-        }
-
-      }
-    }
-  }
-}
-
-@media (max-width: 858px) {
+@media screen and (max-width: 768px) {
 
   nav {
     ul {
@@ -123,4 +104,26 @@ nav {
       }
     }
   }
+}
+@media screen and (max-width: 600px) {
+
+  nav {
+    width: 100%;
+    .enlace {
+      padding-left: 20px;
+    }
+
+    ul {
+      li {
+        a {
+          font-size: 16px;
+          color: #fff;
+        }
+
+      }
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  
 }

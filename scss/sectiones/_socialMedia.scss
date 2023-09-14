@@ -1,17 +1,20 @@
 /* --->Barra Social Media<--- */
+
 .container-- {
   position: fixed;
   bottom: 20px;
   right: 20px;
-
+  
+ 
   .redes {
+    a{text-decoration: none;
     i {
       @include redes-btnmas;
       margin-bottom: -15px;
       opacity: 0;
       visibility: hidden;
     }
-
+   }
     .repro {
       i {
         &:hover {
@@ -73,6 +76,7 @@
       cursor: pointer;
       background: #12203E;
       font-size: 23px;
+     
 
       &:hover {
         background: #dd4336;
@@ -90,6 +94,7 @@
           opacity: 1;
           visibility: visible;
           cursor: pointer;
+         
         }
       }
     }
@@ -104,7 +109,7 @@
     }
   }
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 600px){
   .container--{
        display: none;
   }
